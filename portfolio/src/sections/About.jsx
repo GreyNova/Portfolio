@@ -18,12 +18,7 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Anash</p>
             <p className="subtext">
-              Hello, I'm Anash. I'm a full-stack developer specializing in the
-              MERN stack (React, Node.js). I'm passionate about crafting
-              responsive, user-centric web applications and building the robust
-              backend systems that power them. I have hands-on experience in
-              developing secure user authentication and optimizing search
-              algorithms to improve user retention and query speed
+              Results-driven Full-Stack Developer with expertise in the Spring Boot and React ecosystems. Experienced in architecting scalable applications with PostgreSQL and AWS, including a multi-role e-commerce platform and optimized search algorithms that boosted CTR by 25%. Proficient in secure authentication (JWT) and cloud deployment, with a strong foundation in Data Structures and Algorithms as a Codeforces Specialist
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -105,13 +100,15 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headText">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools that
-              allow me to build robust and scalable applications. I specialize
-              in building responsive front-ends with React and robust back-ends
-              with Node.js and Express. I'm comfortable across the entire stack,
-              from UI to database.
+              I specialize in architecting scalable, full-stack solutions using
+              Spring Boot and React. My expertise spans the entire development
+              lifecycle from building high-performance backends with Java and
+              PostgreSQL, to crafting responsive, SEO friendly frontends using
+              Next.js. I also bring experience in cloud deployment on AWS and
+              integrating AI/ML models to create intelligent, data-driven
+              applications.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">

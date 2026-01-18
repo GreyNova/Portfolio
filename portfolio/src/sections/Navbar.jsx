@@ -4,6 +4,16 @@ function Navigation() {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
+        <a
+          className="nav-link"
+          href="/assets/Anash's_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+      </li>
+      <li className="nav-li">
         <a className="nav-link" href="#home">
           Home
         </a>
@@ -23,6 +33,16 @@ function Navigation() {
           Contact
         </a>
       </li>
+      <li className="nav-li">
+        <a
+          className="nav-link"
+          href="https://github.com/GreyNova"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+      </li>
     </ul>
   );
 }
@@ -36,7 +56,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            GreySapien
+            ANASH
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
