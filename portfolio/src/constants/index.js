@@ -181,12 +181,11 @@ export const myProjects = [
     id: 7,
     title: "3D CSS",
     description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
+      "A mesmerizing 3D Halo effect created entirely using pure CSS and HTML.",
     subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
+      "Leveraged advanced CSS3 properties like transform-style: preserve-3d and keyframe animations to create depth.",
+      "Designed a complex 3D rotating structure without any JavaScript dependencies.",
+      "Optimized rendering performance using hardware-accelerated CSS properties for smooth animations.",
     ],
     href: "https://css-3-d-halo.vercel.app/",
     logo: "",
@@ -194,23 +193,13 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "HTML5",
+        path: "/assets/logos/html5.svg",
       },
       {
         id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "CSS3",
+        path: "/assets/logos/css3.svg",
       },
     ],
   },
