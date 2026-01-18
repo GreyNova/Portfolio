@@ -150,12 +150,11 @@ export const myProjects = [
     id: 6,
     title: "Starbucks Landing Page",
     description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+      "A responsive and interactive Starbucks landing page clone built with vanilla web technologies.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
+      "Developed a visually appealing UI using semantic HTML5 and custom CSS3 for layout and styling.",
+      "Implemented interactive elements and image sliders using vanilla JavaScript for a dynamic user experience.",
+      "Ensured full responsiveness across devices with media queries and a mobile-first design approach.",
     ],
     href: "https://starbucks-landing-page-pi-fawn.vercel.app/",
     logo: "",
@@ -163,23 +162,18 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "JavaScript",
+        path: "/assets/logos/javascript.svg",
       },
       {
         id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
+        name: "HTML5",
+        path: "/assets/logos/html5.svg",
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "CSS3",
+        path: "/assets/logos/css3.svg",
       },
     ],
   },
