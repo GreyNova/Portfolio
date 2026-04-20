@@ -1,63 +1,6 @@
 export const myProjects = [
   {
     id: 1,
-    title: "Posture Correction System",
-    description:
-      "A deep learning system for real-time posture detection and correction feedback.",
-    subDescription: [
-      "Achieved 92%+ accuracy in posture detection using MediaPipe and LSTM networks on time-series data.",
-      "Built a real-time inference pipeline (25 FPS) using OpenCV, optimizing preprocessing time by 30%.",
-      "Delivered immediate corrective feedback, improving user posture consistency by 40% during testing.",
-    ],
-    href: "https://train-wise-website.vercel.app/",
-    logo: "",
-    image: "/assets/projects/Personal_AI_Trainer.png",
-    tags: [
-      {
-        id: 1,
-        name: "Python",
-        path: "/assets/logos/python.png",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "EcommerceHub",
-    description:
-      "A multi-role e-commerce platform with comprehensive order management and secure payments.",
-    subDescription: [
-      "Engineered a multi-role platform (Admin/User) with Spring Boot REST APIs and Role-Based Access Control.",
-      "Integrated Stripe payments and managed order lifecycles using PostgreSQL; deployed securely on AWS.",
-      "Implemented scalable backend architecture with production-ready API documentation.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Spring Boot",
-        path: "/assets/logos/spring-boot.png",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
     title: "Nimbus Keyboards",
     description:
       "A high-performance e-commerce application for custom keyboards with 3D visualization.",
@@ -94,6 +37,63 @@ export const myProjects = [
     ],
   },
   {
+    id: 2,
+    title: "Posture Correction System",
+    description:
+      "A deep learning system for real-time posture detection and correction feedback.",
+    subDescription: [
+      "Achieved 92%+ accuracy in posture detection using MediaPipe and LSTM networks on time-series data.",
+      "Built a real-time inference pipeline (25 FPS) using OpenCV, optimizing preprocessing time by 30%.",
+      "Delivered immediate corrective feedback, improving user posture consistency by 40% during testing.",
+    ],
+    href: "https://train-wise-website.vercel.app/",
+    logo: "",
+    image: "/assets/projects/Personal_AI_Trainer.png",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 2,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "EcommerceHub",
+    description:
+      "A multi-role e-commerce platform with comprehensive order management and secure payments.",
+    subDescription: [
+      "Engineered a multi-role platform (Admin/User) with Spring Boot REST APIs and Role-Based Access Control.",
+      "Integrated Stripe payments and managed order lifecycles using PostgreSQL; deployed securely on AWS.",
+      "Implemented scalable backend architecture with production-ready API documentation.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/accessories.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "Spring Boot",
+        path: "/assets/logos/spring-boot.png",
+      },
+      {
+        id: 2,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 3,
+        name: "Stripe",
+        path: "/assets/logos/stripe.svg",
+      },
+    ],
+  },
+  {
     id: 4,
     title: "Movie Recommender System",
     description:
@@ -115,7 +115,7 @@ export const myProjects = [
       {
         id: 2,
         name: "Streamlit",
-        path: "/assets/logos/react.svg", // Using React logo as placeholder if Streamlit logo not available, or I should check. User didn't provide Streamlit logo path. I'll stick to a generic one or React if I must, but ideally I would check. Step 20 didn't show streamlit logo. I'll use Python logo for now or just generic.
+        path: "/assets/logos/react.svg",
       },
     ],
   },
@@ -226,6 +226,17 @@ export const mySocials = [
 export const experiences = [
   {
     title: "",
+    job: "Nimbus Keyboards",
+    date: "Jun 2025 - Jul 2025",
+    contents: [
+      "Developed a full-stack e-commerce application using Next.js 15, React 19, and TypeScript with server-side rendering for optimal performance.",
+      "Implemented interactive 3D product visualization using React Three Fiber and Three.js for enhanced user engagement.",
+      "Integrated Stripe API for secure payment processing and Prismic headless CMS for dynamic content management.",
+      "Deployed on Vercel with responsive UI using Tailwind CSS and GSAP animations.",
+    ],
+  },
+  {
+    title: "",
     job: "PG Life",
     date: "Sep 2024 - Oct 2024",
     contents: [
@@ -244,17 +255,6 @@ export const experiences = [
       "Implemented custom authentication with AuthJS, JWT tokens, and OTP verification, ensuring robust session management.",
       "Integrated AI-powered message generation using OpenAI API and automated email verification via Resend API.",
       "Developed a responsive UI with ShadCN UI, Zod, and React Hook Form for seamless user experience.",
-    ],
-  },
-  {
-    title: "",
-    job: "Nimbus Keyboards",
-    date: "Jun 2025 - Jul 2025",
-    contents: [
-      "Developed a full-stack e-commerce application using Next.js 15, React 19, and TypeScript with server-side rendering for optimal performance.",
-      "Implemented interactive 3D product visualization using React Three Fiber and Three.js for enhanced user engagement.",
-      "Integrated Stripe API for secure payment processing and Prismic headless CMS for dynamic content management.",
-      "Deployed on Vercel with responsive UI using Tailwind CSS and GSAP animations.",
     ],
   },
   {
