@@ -226,17 +226,6 @@ export const mySocials = [
 export const experiences = [
   {
     title: "",
-    job: "Nimbus Keyboards",
-    date: "Jun 2025 - Jul 2025",
-    contents: [
-      "Developed a full-stack e-commerce application using Next.js 15, React 19, and TypeScript with server-side rendering for optimal performance.",
-      "Implemented interactive 3D product visualization using React Three Fiber and Three.js for enhanced user engagement.",
-      "Integrated Stripe API for secure payment processing and Prismic headless CMS for dynamic content management.",
-      "Deployed on Vercel with responsive UI using Tailwind CSS and GSAP animations.",
-    ],
-  },
-  {
-    title: "",
     job: "PG Life",
     date: "Sep 2024 - Oct 2024",
     contents: [
@@ -255,6 +244,17 @@ export const experiences = [
       "Implemented custom authentication with AuthJS, JWT tokens, and OTP verification, ensuring robust session management.",
       "Integrated AI-powered message generation using OpenAI API and automated email verification via Resend API.",
       "Developed a responsive UI with ShadCN UI, Zod, and React Hook Form for seamless user experience.",
+    ],
+  },
+  {
+    title: "",
+    job: "Nimbus Keyboards",
+    date: "Jun 2025 - Jul 2025",
+    contents: [
+      "Developed a full-stack e-commerce application using Next.js 15, React 19, and TypeScript with server-side rendering for optimal performance.",
+      "Implemented interactive 3D product visualization using React Three Fiber and Three.js for enhanced user engagement.",
+      "Integrated Stripe API for secure payment processing and Prismic headless CMS for dynamic content management.",
+      "Deployed on Vercel with responsive UI using Tailwind CSS and GSAP animations.",
     ],
   },
   {
