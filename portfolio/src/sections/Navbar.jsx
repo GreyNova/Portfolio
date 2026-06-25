@@ -6,7 +6,7 @@ function Navigation() {
       <li className="nav-li">
         <a
           className="nav-link"
-          href="/assets/Anash's_Resume.pdf"
+          href="/assets/GenAI_Soft_RESUME.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
