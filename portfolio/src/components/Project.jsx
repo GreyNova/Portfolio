@@ -8,6 +8,7 @@ const Project = ({
   href,
   image,
   tags,
+  category,
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
@@ -19,7 +20,14 @@ const Project = ({
         onMouseLeave={() => setPreview(null)}
       >
         <div>
-          <p className="text-2xl">{title}</p>
+          <div className="flex items-center gap-3">
+            <p className="text-2xl">{title}</p>
+            {category && (
+              <span className="px-2.5 py-1 text-xs font-normal rounded-full text-neutral-300 bg-white/5 border border-white/10">
+                {category}
+              </span>
+            )}
+          </div>
           <div className="flex gap-5 mt-2 text-sand">
             {tags.map((tag) => (
               <span key={tag.id}>{tag.name}</span>

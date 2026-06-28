@@ -2,6 +2,7 @@ export const myProjects = [
   {
     id: 1,
     title: "Nimbus Keyboards",
+    category: "Full Stack",
     description:
       "A high-performance e-commerce application for custom keyboards with 3D visualization.",
     subDescription: [
@@ -39,6 +40,7 @@ export const myProjects = [
   {
     id: 2,
     title: "Posture Correction System",
+    category: "Gen AI",
     description:
       "A deep learning system for real-time posture detection and correction feedback.",
     subDescription: [
@@ -65,6 +67,7 @@ export const myProjects = [
   {
     id: 3,
     title: "EcommerceHub",
+    category: "Backend",
     description:
       "A multi-role e-commerce platform with comprehensive order management and secure payments.",
     subDescription: [
@@ -96,6 +99,7 @@ export const myProjects = [
   {
     id: 4,
     title: "Movie Recommender System",
+    category: "Data Analytics",
     description:
       "A machine learning-based recommendation engine that suggests movies based on user preferences.",
     subDescription: [
@@ -122,6 +126,7 @@ export const myProjects = [
   {
     id: 5,
     title: "PG Life",
+    category: "Full Stack",
     description:
       "A full-stack web platform with optimized search and secure user authentication.",
     subDescription: [
@@ -149,6 +154,7 @@ export const myProjects = [
   {
     id: 6,
     title: "Starbucks Landing Page",
+    category: "Frontend",
     description:
       "A responsive and interactive Starbucks landing page clone built with vanilla web technologies.",
     subDescription: [
@@ -180,6 +186,7 @@ export const myProjects = [
   {
     id: 7,
     title: "3D CSS",
+    category: "Frontend",
     description:
       "A mesmerizing 3D Halo effect created entirely using pure CSS and HTML.",
     subDescription: [
@@ -226,24 +233,22 @@ export const mySocials = [
 export const experiences = [
   {
     title: "",
-    job: "PG Life",
-    date: "Sep 2024 - Oct 2024",
+    job: "Uniphar Biotech Pvt. Ltd. — Tech Intern",
+    date: "Mar 2026 - Present",
     contents: [
-      "Optimized search algorithm, increasing CTR by 25% and reducing query response time by 40%.",
-      "Increased search result relevance, leading to a 30% increase in user retention.",
-      "Developed and deployed secure user authentication for 500+ test users, reducing session dropouts by 15%.",
-      "Integrated password hashing for enhanced security during user registration and login processes.",
+      "Spearheaded the development of Uniphar Biotech's core enterprise website, replacing an outdated legacy system with a scalable React and TypeScript platform, improving overall application rendering speed by 40%.",
+      "Engineered a responsive 'Liquid Glass' UI with Tailwind CSS and complex global transitions, enhancing navigation efficiency and reducing user workflow completion time by 25%.",
+      "Architected and integrated a robust MongoDB schema to manage and index 1000+ pharmaceutical product records, achieving sub-100ms query response times.",
     ],
   },
   {
     title: "",
-    job: "Mystery Messaging Website",
-    date: "Nov 2024 - Jan 2025",
+    job: "EcommerceHub",
+    date: "Dec 2025 - Present",
     contents: [
-      "Built a full-stack anonymous messaging website using Next.js, TypeScript and MongoDB with secure, scalable architecture.",
-      "Implemented custom authentication with AuthJS, JWT tokens, and OTP verification, ensuring robust session management.",
-      "Integrated AI-powered message generation using OpenAI API and automated email verification via Resend API.",
-      "Developed a responsive UI with ShadCN UI, Zod, and React Hook Form for seamless user experience.",
+      "Developed a production-grade marketplace using Spring Boot, React, and Redux. Implemented microservices with separate customer, admin, and seller portals with real-time inventory management.",
+      "Integrated enterprise-level authentication using Spring Security with JWT tokens and role-based access control (RBAC). Implemented secure payment gateway integration with Stripe API.",
+      "Designed complex entity relationships using JPA/Hibernate across PostgreSQL databases. Implemented advanced features including pagination, sorting and search.",
     ],
   },
   {
@@ -269,12 +274,24 @@ export const experiences = [
   },
   {
     title: "",
-    job: "EcommerceHub",
-    date: "Dec 2025 - Present",
+    job: "Mystery Messaging Website",
+    date: "Nov 2024 - Jan 2025",
     contents: [
-      "Developed a production-grade marketplace using Spring Boot, React, and Redux. Implemented microservices with separate customer, admin, and seller portals with real-time inventory management.",
-      "Integrated enterprise-level authentication using Spring Security with JWT tokens and role-based access control (RBAC). Implemented secure payment gateway integration with Stripe API.",
-      "Designed complex entity relationships using JPA/Hibernate across PostgreSQL databases. Implemented advanced features including pagination, sorting and search.",
+      "Built a full-stack anonymous messaging website using Next.js, TypeScript and MongoDB with secure, scalable architecture.",
+      "Implemented custom authentication with AuthJS, JWT tokens, and OTP verification, ensuring robust session management.",
+      "Integrated AI-powered message generation using OpenAI API and automated email verification via Resend API.",
+      "Developed a responsive UI with ShadCN UI, Zod, and React Hook Form for seamless user experience.",
+    ],
+  },
+  {
+    title: "",
+    job: "PG Life",
+    date: "Sep 2024 - Oct 2024",
+    contents: [
+      "Optimized search algorithm, increasing CTR by 25% and reducing query response time by 40%.",
+      "Increased search result relevance, leading to a 30% increase in user retention.",
+      "Developed and deployed secure user authentication for 500+ test users, reducing session dropouts by 15%.",
+      "Integrated password hashing for enhanced security during user registration and login processes.",
     ],
   },
 ];
