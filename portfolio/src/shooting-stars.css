@@ -8,6 +8,8 @@
     0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 1);
   animation: shoot-animation linear infinite;
   opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .shooting-star::before {
@@ -22,7 +24,7 @@
 
 @keyframes shoot-animation {
   0% {
-    transform: translateX(0) translateY(0) rotate(-45deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
     opacity: 0;
   }
   10% {
@@ -32,7 +34,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(-1500px) translateY(1500px) rotate(-45deg);
+    transform: translate3d(-1500px, 1500px, 0) rotate(-45deg);
     opacity: 0;
   }
 }

@@ -8,14 +8,14 @@ const ShootingStars = () => {
     // Generate some random starting positions for shooting stars
     const generateStars = () => {
       const newStars = [];
-      const delays = [0, 1.3, 2.6];
-      for (let i = 0; i < 3; i++) {
+      const numStars = 9; // Number of stars
+      for (let i = 0; i < numStars; i++) {
         newStars.push({
           id: i,
-          top: Math.random() * 40 + "%",
-          left: Math.random() * 50 + 50 + "%",
-          delay: delays[i] + "s",
-          duration: "4s",
+          top: Math.random() * 120 - 20 + "%", // From -20% to 100%
+          left: Math.random() * 120 + "%", // From 0% to 120%
+          delay: (Math.random() * 8).toFixed(2) + "s", // Random delay between 0 and 8s
+          duration: (Math.random() * 5 + 1.5).toFixed(2) + "s", // Random duration between 1.5s and 6.5s
         });
       }
       setStars(newStars);

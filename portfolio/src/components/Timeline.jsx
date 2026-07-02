@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({ data }) => {
@@ -15,17 +15,23 @@ export const Timeline = ({ data }) => {
   }, [ref]);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    target: ref,
+    offset: ["start 50%", "end 50%"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  const heightTransform = useTransform(smoothProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(smoothProgress, [0, 0.1], [0, 1]);
 
   return (
     <div className="c-space section-spacing" ref={containerRef}>
       <h2 className="text-heading">My Work Experience</h2>
-      <div ref={ref} className="relative pb-20">
+      <div ref={ref} className="relative">
         {data.map((item, index) => (
           <div
             key={index}
