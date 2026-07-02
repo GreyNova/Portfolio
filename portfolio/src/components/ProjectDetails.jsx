@@ -23,7 +23,19 @@ const ProjectDetails = ({
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl max-h-[40vh] object-cover" />
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full rounded-t-2xl max-h-[40vh] object-cover"
+          />
+        ) : (
+          <div className="flex items-center justify-center w-full rounded-t-2xl max-h-[40vh] min-h-[200px] bg-gradient-to-br from-white/10 to-white/0">
+            <span className="text-2xl font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-500">
+              {title}
+            </span>
+          </div>
+        )}
         <div className="p-5 overflow-y-auto max-h-[40vh]">
           <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
@@ -32,14 +44,23 @@ const ProjectDetails = ({
           ))}
           <div className="flex items-center justify-between mt-4">
             <div className="flex gap-3">
-              {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
-                />
-              ))}
+              {tags.map((tag) =>
+                tag.path ? (
+                  <img
+                    key={tag.id}
+                    src={tag.path}
+                    alt={tag.name}
+                    className="rounded-lg size-10 hover-animation"
+                  />
+                ) : (
+                  <span
+                    key={tag.id}
+                    className="flex items-center px-3 rounded-lg size-10 text-sm text-neutral-300 bg-white/5 border border-white/10 hover-animation"
+                  >
+                    {tag.name}
+                  </span>
+                )
+              )}
             </div>
             <a
               className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"

@@ -210,6 +210,244 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 8,
+    title: "Freight & Logistics Blockchain",
+    category: "BlockChain",
+    description:
+      "A decentralized logistics tracking application powered by an Ethereum smart contract deployed on the Sepolia testnet.",
+    subDescription: [
+      "Authored and deployed a Solidity smart contract on the Sepolia testnet to record immutable shipment events on-chain.",
+      "Built a public dashboard that visualizes freight state transitions directly from contract data via Etherscan.",
+      "Implemented transparent, tamper-resistant shipment tracking with verifiable transaction hashes for every lifecycle update.",
+    ],
+    href: "https://github.com/GreyNova/Freight-and-Logistics-using-Blockchain",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Solidity",
+      },
+      {
+        id: 2,
+        name: "Ethereum",
+      },
+      {
+        id: 3,
+        name: "GitHub",
+        path: "/assets/logos/github.svg",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Linklytics",
+    category: "Full Stack",
+    description:
+      "A full-stack URL shortener with real-time click analytics, built across a React frontend and a Spring Boot backend.",
+    subDescription: [
+      "Designed a React frontend paired with a Spring Boot backend service that generates and resolves short links.",
+      "Implemented click tracking and an analytics layer to surface traffic insights for each shortened URL.",
+      "Packaged the backend (url-shortener-sb) alongside the React client for a clean, deployable monorepo structure.",
+    ],
+    href: "https://github.com/GreyNova/Linklytics",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Spring Boot",
+        path: "/assets/logos/spring-boot.png",
+      },
+      {
+        id: 3,
+        name: "JavaScript",
+        path: "/assets/logos/javascript.svg",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Noticias Breves",
+    category: "GenAI",
+    description:
+      "An AI-powered news aggregator that collects, summarizes, and surfaces concise news briefs.",
+    subDescription: [
+      "Built a Python pipeline that aggregates news from multiple sources and condenses articles into brief summaries.",
+      "Applied generative-AI summarization to reduce long-form articles into scannable, high-signal updates.",
+      "Structured the output for quick consumption across categories and topics.",
+    ],
+    href: "https://github.com/GreyNova/Noticias-breves",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 2,
+        name: "GenAI",
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "SQL Database Agent",
+    category: "GenAI",
+    description:
+      "A natural-language-to-SQL agent that lets users query a database conversationally and returns grounded, accurate results.",
+    subDescription: [
+      "Engineered an LLM agent that translates natural-language questions into validated SQL queries.",
+      "Containerized the service with Docker for consistent, reproducible deployments.",
+      "Exposed a clean API surface so any frontend can submit queries and receive structured answers.",
+    ],
+    href: "https://github.com/GreyNova/SQL-DATABASE-Agent",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 2,
+        name: "LLM Agents",
+      },
+      {
+        id: 3,
+        name: "Docker",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: "SRE Swarm",
+    category: "GenAI",
+    description:
+      "An autonomous Site Reliability Engineering agent built on LangGraph that detects, diagnoses, patches, tests, and deploys fixes for production failures.",
+    subDescription: [
+      "Modeled a multi-step remediation workflow with LangGraph covering memory leaks, connection-pool exhaustion, and CPU spikes.",
+      "Automated the full loop from incident detection through patch generation, testing, and deployment.",
+      "Targeted a Spring Boot / AWS ECS service, demonstrating real failure-class coverage.",
+    ],
+    href: "https://github.com/GreyNova/SRE-SWARM",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 2,
+        name: "LangGraph",
+      },
+      {
+        id: 3,
+        name: "AWS",
+      },
+    ],
+  },
+  {
+    id: 13,
+    title: "Nano LLM",
+    category: "ML",
+    description:
+      "A lightweight, from-scratch implementation of a GPT-style transformer language model built for educational exploration.",
+    subDescription: [
+      "Implemented the full transformer architecture (tokenization, attention, training loop) from the ground up in Python.",
+      "Designed for step-by-step exploration of how GPT-like models are constructed and trained.",
+      "Kept the implementation minimal and readable to make the internals easy to follow.",
+    ],
+    href: "https://github.com/GreyNova/Nano_LLM",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 2,
+        name: "PyTorch",
+      },
+      {
+        id: 3,
+        name: "Transformers",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: "Rubik's Cube Solver",
+    category: "ML",
+    description:
+      "A computer-vision system that scans a Rubik's Cube from a live camera feed and computes an optimal solution.",
+    subDescription: [
+      "Captures and analyzes all six faces of the cube in real time using a live camera feed and OpenCV color detection.",
+      "Reconstructs the cube's 3D state digitally and computes an optimal solution, averaging ~24 moves.",
+      "Renders the solution as an intuitive, step-by-step visual guide.",
+    ],
+    href: "https://github.com/GreyNova/Rubik-s-Cube",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "OpenCV",
+      },
+      {
+        id: 2,
+        name: "Python",
+        path: "/assets/logos/python.png",
+      },
+      {
+        id: 3,
+        name: "Computer Vision",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: "NGL",
+    category: "Full Stack",
+    description:
+      "An anonymous messaging application built with Next.js and TypeScript, letting users receive questions without revealing identities.",
+    subDescription: [
+      "Developed a full-stack anonymous messaging flow with Next.js and TypeScript for a type-safe codebase.",
+      "Implemented shareable user profiles that collect anonymous messages and questions.",
+      "Structured the project for fast iteration with the modern Next.js app architecture.",
+    ],
+    href: "https://github.com/GreyNova/NGL",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+      },
+      {
+        id: 3,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [

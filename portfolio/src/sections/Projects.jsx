@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
-import { motion, useMotionValue, useSpring } from "motion/react";
+import { motion } from "motion/react";
 
 export const projectCategories = [
   "GenAI",
@@ -13,17 +13,6 @@ export const projectCategories = [
 ];
 
 const Projects = () => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const springX = useSpring(x, { damping: 10, stiffness: 50 });
-  const springY = useSpring(y, { damping: 10, stiffness: 50 });
-
-  const handleMouseMove = (e) => {
-    x.set(e.clientX + 20);
-    y.set(e.clientY + 20);
-  };
-
-  const [preview, setPreview] = useState(null);
   const [activeCategory, setActiveCategory] = useState(null);
   const [showList, setShowList] = useState(false);
 
@@ -71,23 +60,21 @@ const Projects = () => {
       {/* Projects List Modal */}
       {showList && (
         <div
-          className="fixed inset-0 z-40 flex items-center justify-center w-full h-full p-5 backdrop-blur-sm bg-black/60"
-          onMouseMove={handleMouseMove}
+          className="fixed inset-0 z-40 flex items-center justify-center w-full h-full p-5 bg-black/90"
         >
           <motion.div
-            className="relative w-full max-w-4xl p-8 overflow-y-auto border shadow-2xl max-h-[85vh] rounded-3xl bg-white/5 backdrop-blur-3xl border-white/10"
+            className="relative w-full max-w-4xl p-8 overflow-y-auto border shadow-2xl max-h-[85vh] rounded-3xl bg-[#0a0a0a] border-white/10"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ type: "spring", damping: 20, stiffness: 100 }}
           >
-            <div className="sticky top-0 z-50 flex items-center justify-between py-4 mb-6 border bg-white/5 backdrop-blur-md border-white/10 px-6 rounded-2xl">
+            <div className="sticky top-0 z-50 flex items-center justify-between py-4 mb-6 border bg-[#111111] border-white/10 px-6 rounded-2xl">
               <h3 className="text-3xl font-bold text-white">
                 {activeCategory} Projects
               </h3>
               <button
                 onClick={() => {
                   setShowList(false);
-                  setPreview(null);
                 }}
                 className="p-2 transition-colors rounded-lg bg-white/5 hover:bg-white/20"
               >
@@ -101,7 +88,6 @@ const Projects = () => {
                   <Project
                     key={project.id}
                     {...project}
-                    setPreview={setPreview}
                   />
                 ))
               ) : (
@@ -113,15 +99,6 @@ const Projects = () => {
               )}
             </div>
           </motion.div>
-
-          {/* Floating Preview Image */}
-          {preview && (
-            <motion.img
-              className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-2xl pointer-events-none w-80"
-              src={preview}
-              style={{ x: springX, y: springY }}
-            />
-          )}
         </div>
       )}
     </section>
