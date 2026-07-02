@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { createPortal } from "react-dom";
+
 const ProjectDetails = ({
   title,
   description,
@@ -8,25 +10,25 @@ const ProjectDetails = ({
   href,
   closeModal,
 }) => {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+  return createPortal(
+    <div className="fixed inset-0 z-[60] flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm bg-black/60">
       <motion.div
-        className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+        className="relative max-w-2xl border shadow-2xl rounded-2xl bg-white/5 backdrop-blur-3xl border-white/10"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute p-2 transition-colors rounded-lg top-5 right-5 bg-black/40 hover:bg-black/60 backdrop-blur-md"
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
-        <div className="p-5">
+        <img src={image} alt={title} className="w-full rounded-t-2xl max-h-[40vh] object-cover" />
+        <div className="p-5 overflow-y-auto max-h-[40vh]">
           <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
           {subDescription.map((subDesc, index) => (
-            <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
+            <p key={index} className="mb-3 font-normal text-neutral-400">{subDesc}</p>
           ))}
           <div className="flex items-center justify-between mt-4">
             <div className="flex gap-3">
@@ -50,7 +52,8 @@ const ProjectDetails = ({
           </div>
         </div>
       </motion.div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

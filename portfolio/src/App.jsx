@@ -6,18 +6,34 @@ import Projects from "./sections/Projects";
 import Experiences from "./sections/Experiences";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import { Particles } from "./components/Particles";
+import ShootingStars from "./components/ShootingStars";
 
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experiences />
-      <Contact />
-      <Footer />
-    </div>
+    <main className="relative w-full min-h-screen">
+      {/* Global Starry Background */}
+      <div className="fixed inset-0 z-[-10]">
+        <Particles
+          className="absolute inset-0"
+          quantity={120}
+          ease={80}
+          color={"#ffffff"}
+          refresh
+        />
+        <ShootingStars />
+      </div>
+
+      <div className="container mx-auto max-w-7xl">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Experiences />
+        <Contact />
+        <Footer />
+      </div>
+    </main>
   );
 };
 

@@ -1,0 +1,38 @@
+.shooting-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1),
+    0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 1);
+  animation: shoot-animation linear infinite;
+  opacity: 0;
+}
+
+.shooting-star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes shoot-animation {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1500px) translateY(1500px) rotate(-45deg);
+    opacity: 0;
+  }
+}

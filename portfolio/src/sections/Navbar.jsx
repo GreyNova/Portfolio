@@ -43,6 +43,26 @@ function Navigation() {
           Github
         </a>
       </li>
+      <li className="nav-li">
+        <a
+          className="nav-link"
+          href="https://www.linkedin.com/in/anash-g08a10419"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </li>
+      <li className="nav-li">
+        <a
+          className="nav-link"
+          href="https://leetcode.com/u/anashg85/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LeetCode
+        </a>
+      </li>
     </ul>
   );
 }
@@ -50,7 +70,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
+      {/* Significantly reduced left/right gap and removed max-width constraint */}
+      <div className="w-full mx-auto sm:px-6 px-4 lg:px-10">
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"

@@ -40,7 +40,7 @@ export const myProjects = [
   {
     id: 2,
     title: "Posture Correction System",
-    category: "Gen AI",
+    category: "GenAI",
     description:
       "A deep learning system for real-time posture detection and correction feedback.",
     subDescription: [
@@ -67,7 +67,7 @@ export const myProjects = [
   {
     id: 3,
     title: "EcommerceHub",
-    category: "Backend",
+    category: "Back End",
     description:
       "A multi-role e-commerce platform with comprehensive order management and secure payments.",
     subDescription: [
@@ -99,7 +99,7 @@ export const myProjects = [
   {
     id: 4,
     title: "Movie Recommender System",
-    category: "Data Analytics",
+    category: "ML",
     description:
       "A machine learning-based recommendation engine that suggests movies based on user preferences.",
     subDescription: [
@@ -154,7 +154,7 @@ export const myProjects = [
   {
     id: 6,
     title: "Starbucks Landing Page",
-    category: "Frontend",
+    category: "Front End",
     description:
       "A responsive and interactive Starbucks landing page clone built with vanilla web technologies.",
     subDescription: [
@@ -186,7 +186,7 @@ export const myProjects = [
   {
     id: 7,
     title: "3D CSS",
-    category: "Frontend",
+    category: "Front End",
     description:
       "A mesmerizing 3D Halo effect created entirely using pure CSS and HTML.",
     subDescription: [

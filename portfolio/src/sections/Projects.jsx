@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 export const projectCategories = [
-  "All",
+  "GenAI",
   "Full Stack",
-  "Frontend",
-  "Gen AI",
-  "Data Analytics",
-  "Backend",
+  "Front End",
+  "Back End",
+  "ML",
+  "BlockChain",
 ];
 
 const Projects = () => {
@@ -17,63 +17,112 @@ const Projects = () => {
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 10, stiffness: 50 });
   const springY = useSpring(y, { damping: 10, stiffness: 50 });
+
   const handleMouseMove = (e) => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
   };
-  const [preview, setPreview] = useState(null);
-  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects =
-    activeCategory === "All"
-      ? myProjects
-      : myProjects.filter((project) => project.category === activeCategory);
+  const [preview, setPreview] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(null);
+  const [showList, setShowList] = useState(false);
+
+  // Stop background scrolling when modal is open
+  useEffect(() => {
+    if (showList) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showList]);
+
+  const filteredProjects = myProjects.filter(
+    (project) => project.category === activeCategory
+  );
 
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="relative c-space section-spacing"
-      id="projects"
-    >
+    <section className="relative c-space section-spacing" id="projects">
       <h2 className="text-heading">My Selected Projects</h2>
 
-      {/* Category Filter */}
-      <div className="flex flex-wrap items-center gap-3 mt-8 mb-2">
-        {projectCategories.map((category) => {
-          const isActive = activeCategory === category;
-          return (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`relative px-4 py-2 text-sm font-normal rounded-full cursor-pointer transition-colors hover-animation ${
-                isActive
-                  ? "text-white"
-                  : "text-neutral-400 hover:text-neutral-200"
-              }`}
-            >
-              {isActive && (
-                <motion.span
-                  layoutId="activeCategory"
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-lavender/30 to-royal/30 border border-white/10"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">{category}</span>
-            </button>
-          );
-        })}
+      {/* Grid of Category Cards */}
+      <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3">
+        {projectCategories.map((category) => (
+          <div
+            key={category}
+            onClick={() => {
+              setActiveCategory(category);
+              setShowList(true);
+            }}
+            className="relative flex items-center justify-center p-10 overflow-hidden transition-all duration-300 border shadow-lg cursor-pointer rounded-2xl bg-white/5 border-white/10 backdrop-blur-md hover:-translate-y-2 hover:bg-white/10 min-h-[200px] group"
+          >
+            {/* Glassmorphic inner glow effect */}
+            <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-br from-white/10 to-transparent group-hover:opacity-100" />
+
+            <h3 className="relative z-10 text-3xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-400">
+              {category}
+            </h3>
+          </div>
+        ))}
       </div>
 
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-8 h-[1px] w-full" />
-      {filteredProjects.map((project) => (
-        <Project key={project.id} {...project} setPreview={setPreview} />
-      ))}
-      {preview && (
-        <motion.img
-          className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
-          src={preview}
-          style={{ x: springX, y: springY }}
-        />
+      {/* Projects List Modal */}
+      {showList && (
+        <div
+          className="fixed inset-0 z-40 flex items-center justify-center w-full h-full p-5 backdrop-blur-sm bg-black/60"
+          onMouseMove={handleMouseMove}
+        >
+          <motion.div
+            className="relative w-full max-w-4xl p-8 overflow-y-auto border shadow-2xl max-h-[85vh] rounded-3xl bg-white/5 backdrop-blur-3xl border-white/10"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ type: "spring", damping: 20, stiffness: 100 }}
+          >
+            <div className="sticky top-0 z-50 flex items-center justify-between py-4 mb-6 border bg-white/5 backdrop-blur-md border-white/10 px-6 rounded-2xl">
+              <h3 className="text-3xl font-bold text-white">
+                {activeCategory} Projects
+              </h3>
+              <button
+                onClick={() => {
+                  setShowList(false);
+                  setPreview(null);
+                }}
+                className="p-2 transition-colors rounded-lg bg-white/5 hover:bg-white/20"
+              >
+                <img src="assets/close.svg" className="w-6 h-6" alt="Close" />
+              </button>
+            </div>
+
+            <div className="flex flex-col w-full">
+              {filteredProjects.length > 0 ? (
+                filteredProjects.map((project) => (
+                  <Project
+                    key={project.id}
+                    {...project}
+                    setPreview={setPreview}
+                  />
+                ))
+              ) : (
+                <div className="flex flex-col items-center justify-center py-20 opacity-50">
+                  <p className="text-xl text-neutral-400">
+                    No projects yet in this category.
+                  </p>
+                </div>
+              )}
+            </div>
+          </motion.div>
+
+          {/* Floating Preview Image */}
+          {preview && (
+            <motion.img
+              className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-2xl pointer-events-none w-80"
+              src={preview}
+              style={{ x: springX, y: springY }}
+            />
+          )}
+        </div>
       )}
     </section>
   );
