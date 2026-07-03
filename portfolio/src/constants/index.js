@@ -75,7 +75,7 @@ export const myProjects = [
       "Integrated Stripe payments and managed order lifecycles using PostgreSQL; deployed securely on AWS.",
       "Implemented scalable backend architecture with production-ready API documentation.",
     ],
-    href: "",
+    href: "https://github.com/GreyNova/EcomHome.git",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
@@ -107,7 +107,7 @@ export const myProjects = [
       "Built an interactive Streamlit web interface for easy user interaction.",
       "Utilized TMDB API to fetch movie posters and details in real-time.",
     ],
-    href: "",
+    href: "https://github.com/GreyNova/Movie-Recommender-System-with-TMDB-Dataset",
     logo: "",
     image: "/assets/projects/Movie_Recommender_System.png",
     tags: [
@@ -135,7 +135,7 @@ export const myProjects = [
       "Developed and deployed secure user authentication for 500+ test users, reducing session dropouts by 15%.",
       "Integrated password hashing for enhanced security during user registration and login processes.",
     ],
-    href: "",
+    href: "https://github.com/GreyNova/PG-Life",
     logo: "",
     image: "/assets/projects/PG_Life.png",
     tags: [
@@ -309,7 +309,7 @@ export const myProjects = [
       "Containerized the service with Docker for consistent, reproducible deployments.",
       "Exposed a clean API surface so any frontend can submit queries and receive structured answers.",
     ],
-    href: "https://github.com/GreyNova/SQL-DATABASE-Agent",
+    href: "https://sql-database-agent-eta.vercel.app",
     logo: "",
     image: "",
     tags: [

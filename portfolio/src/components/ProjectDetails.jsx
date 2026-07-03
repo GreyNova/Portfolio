@@ -43,7 +43,7 @@ const ProjectDetails = ({
             <p key={index} className="mb-3 font-normal text-neutral-400">{subDesc}</p>
           ))}
           <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {tags.map((tag) =>
                 tag.path ? (
                   <img
@@ -55,7 +55,7 @@ const ProjectDetails = ({
                 ) : (
                   <span
                     key={tag.id}
-                    className="flex items-center px-3 rounded-lg size-10 text-sm text-neutral-300 bg-white/5 border border-white/10 hover-animation"
+                    className="flex items-center justify-center px-3 rounded-lg h-10 text-sm text-neutral-300 bg-white/5 border border-white/10 hover-animation whitespace-nowrap"
                   >
                     {tag.name}
                   </span>
