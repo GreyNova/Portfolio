@@ -2,7 +2,7 @@ export const myProjects = [
   {
     id: 1,
     title: "Nimbus Keyboards",
-    category: "Full Stack",
+    category: ["Full Stack", "Front End"],
     description:
       "A high-performance e-commerce application for custom keyboards with 3D visualization.",
     subDescription: [

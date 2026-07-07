@@ -19,11 +19,17 @@ const Project = ({
         <div>
           <div className="flex items-center gap-3">
             <p className="text-2xl">{title}</p>
-            {category && (
-              <span className="px-2.5 py-1 text-xs font-normal rounded-full text-neutral-300 bg-white/5 border border-white/10">
-                {category}
-              </span>
-            )}
+            {category &&
+              (Array.isArray(category) ? category : [category]).map(
+                (cat, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-1 text-xs font-normal rounded-full text-neutral-300 bg-white/5 border border-white/10"
+                  >
+                    {cat}
+                  </span>
+                )
+              )}
           </div>
           <div className="flex gap-5 mt-2 text-sand">
             {tags.map((tag) => (

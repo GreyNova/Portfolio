@@ -28,8 +28,10 @@ const Projects = () => {
     };
   }, [showList]);
 
-  const filteredProjects = myProjects.filter(
-    (project) => project.category === activeCategory
+  const filteredProjects = myProjects.filter((project) =>
+    Array.isArray(project.category)
+      ? project.category.includes(activeCategory)
+      : project.category === activeCategory
   );
 
   return (
