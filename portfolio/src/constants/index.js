@@ -461,7 +461,7 @@ export const myProjects = [
     ],
     href: "https://olumpusgym.vercel.app/",
     logo: "",
-    image: "",
+    image: "/assets/projects/olumpus.png",
     tags: [
       {
         id: 1,
