@@ -448,6 +448,33 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 16,
+    title: "Olumpus Gym",
+    category: "Front End",
+    description:
+      "A modern, interactive frontend for a fitness and gym website.",
+    subDescription: [
+      "Built a fully responsive and visually appealing user interface for a fitness center.",
+      "Implemented smooth scrolling, dynamic animations, and an intuitive layout.",
+      "Source Code: https://github.com/GreyNova/Olumpus_Gym.git",
+    ],
+    href: "https://olumpusgym.vercel.app/",
+    logo: "",
+    image: "",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
