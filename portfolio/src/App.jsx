@@ -8,11 +8,12 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import { Particles } from "./components/Particles";
 import ShootingStars from "./components/ShootingStars";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
     <main className="relative w-full min-h-screen">
-      {/* Global Starry Background */}
+      {/* Global Background */}
       <div className="fixed inset-0 z-[-10]">
         <Particles
           className="absolute inset-0"
@@ -33,6 +34,7 @@ const App = () => {
         <Contact />
         <Footer />
       </div>
+      <Analytics />
     </main>
   );
 };
