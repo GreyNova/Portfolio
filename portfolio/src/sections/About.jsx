@@ -13,7 +13,7 @@ const About = () => {
         <div className="flex items-end grid-default-color grid-1">
           <img
             src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            className="absolute opacity-40 md:opacity-100 scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
             <p className="headtext">Hi, I'm Anash</p>
@@ -21,15 +21,15 @@ const About = () => {
               Results-driven Full-Stack Developer with expertise in the Spring Boot and React ecosystems. Experienced in architecting scalable applications with PostgreSQL and AWS, including a multi-role e-commerce platform and optimized search algorithms that boosted CTR by 25%. Proficient in secure authentication (JWT) and cloud deployment, with a strong foundation in Data Structures and Algorithms as a Codeforces Specialist
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
+            className="flex items-center justify-center w-full h-full scale-[0.8] md:scale-100 origin-center"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-4xl md:text-5xl text-gray-500">
               CODE IS CRAFT
             </p>
             <Card
@@ -76,7 +76,7 @@ const About = () => {
         </div>
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
+          <div className="relative z-10 w-full md:w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
               IST (UTC+5:30) — India <br />
@@ -84,7 +84,7 @@ const About = () => {
               schedule to collaborate across time zones.
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
+          <figure className="absolute right-[-10%] md:left-[30%] top-[10%] opacity-30 md:opacity-100">
             <Globe />
           </figure>
         </div>
@@ -99,7 +99,7 @@ const About = () => {
         </div>
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
+          <div className="relative z-10 w-full md:w-[50%]">
             <p className="headText">Tech Stack</p>
             <p className="subtext">
               I specialize in architecting scalable, full-stack solutions using
@@ -111,7 +111,7 @@ const About = () => {
               applications.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125 opacity-30 md:opacity-100 pointer-events-none md:pointer-events-auto">
             <Frameworks />
           </div>
         </div>

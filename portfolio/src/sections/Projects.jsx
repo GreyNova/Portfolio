@@ -47,12 +47,12 @@ const Projects = () => {
               setActiveCategory(category);
               setShowList(true);
             }}
-            className="relative flex items-center justify-center p-10 overflow-hidden transition-all duration-300 border shadow-lg cursor-pointer rounded-2xl bg-white/5 border-white/10 backdrop-blur-md hover:-translate-y-2 hover:bg-white/10 min-h-[200px] group"
+            className="relative flex items-center justify-center p-6 md:p-10 overflow-hidden transition-all duration-300 border shadow-lg cursor-pointer rounded-2xl bg-white/5 border-white/10 backdrop-blur-md hover:-translate-y-2 hover:bg-white/10 min-h-[120px] md:min-h-[200px] group"
           >
             {/* Glassmorphic inner glow effect */}
             <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-br from-white/10 to-transparent group-hover:opacity-100" />
 
-            <h3 className="relative z-10 text-3xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-400">
+            <h3 className="relative z-10 text-2xl md:text-3xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-400">
               {category}
             </h3>
           </div>
