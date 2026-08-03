@@ -38,6 +38,42 @@ export const myProjects = [
     ],
   },
   {
+    id: 17,
+    title: "Fizzi — 3D Animated Soda Landing Page",
+    category: "Front End",
+    description:
+      "A modern, high-performance 3D animated e-commerce landing page for Fizzi, a fictional soda brand. Built with Next.js, Three.js, GSAP animations, and integrated with Prismic CMS for dynamic content management.",
+    subDescription: [
+      "Interactive 3D Visuals: Real-time 3D soda cans and dynamic scenes powered by Three.js & React Three Fiber.",
+      "Smooth Animations: Immersive scroll-driven animations powered by GSAP & ScrollTrigger.",
+      "Fully Responsive: Seamless experience across desktop, tablet, and mobile devices.",
+      "Headless CMS: Dynamic slices and page building powered by Prismic & Slice Machine.",
+      "Ultra Fast: Built on Next.js 14 App Router for optimal rendering performance and SEO.",
+    ],
+    href: "https://fizzi-drinks-fawn.vercel.app/",
+    logo: "",
+    image: "/assets/projects/fizzi.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+      },
+      {
+        id: 2,
+        name: "Three.js",
+        path: "/assets/logos/threejs.svg",
+      },
+      {
+        id: 3,
+        name: "GSAP",
+      },
+      {
+        id: 4,
+        name: "Prismic CMS",
+      },
+    ],
+  },
+  {
     id: 2,
     title: "Posture Correction System",
     category: "GenAI",
@@ -472,42 +508,6 @@ export const myProjects = [
         id: 2,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 17,
-    title: "Fizzi — 3D Animated Soda Landing Page",
-    category: "Front End",
-    description:
-      "A modern, high-performance 3D animated e-commerce landing page for Fizzi, a fictional soda brand. Built with Next.js, Three.js, GSAP animations, and integrated with Prismic CMS for dynamic content management.",
-    subDescription: [
-      "Interactive 3D Visuals: Real-time 3D soda cans and dynamic scenes powered by Three.js & React Three Fiber.",
-      "Smooth Animations: Immersive scroll-driven animations powered by GSAP & ScrollTrigger.",
-      "Fully Responsive: Seamless experience across desktop, tablet, and mobile devices.",
-      "Headless CMS: Dynamic slices and page building powered by Prismic & Slice Machine.",
-      "Ultra Fast: Built on Next.js 14 App Router for optimal rendering performance and SEO.",
-    ],
-    href: "https://fizzi-drinks-fawn.vercel.app/",
-    logo: "",
-    image: "/assets/projects/fizzi.png",
-    tags: [
-      {
-        id: 1,
-        name: "Next.js",
-      },
-      {
-        id: 2,
-        name: "Three.js",
-        path: "/assets/logos/threejs.svg",
-      },
-      {
-        id: 3,
-        name: "GSAP",
-      },
-      {
-        id: 4,
-        name: "Prismic CMS",
       },
     ],
   },
